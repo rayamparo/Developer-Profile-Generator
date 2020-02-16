@@ -47,7 +47,55 @@ const questions = [
 ];
 
 function writeToFile(fileName, data){
-    console.log(`${fileName}.md`);
-    console.log(data);
-}
+   
+};
 
+
+
+
+function init() {
+    inquirer.prompt(questions)
+    .then(response =>{
+        let content="";
+        console.log(response);
+        
+        content += `# Node.js \n`
+        content += `## Table of Contents \n
+        1.) Project \n
+        2.) Description \n
+        3.) Licenses \n
+        4.) Install \n
+        5.) Tests \n
+        6.) Repo \n
+        7.) Contribute \n`
+        content += `## Project: \n
+        ${response.project} \n`
+        content += `## Description: \n
+        ${response.description}`
+        content += `## Licenses: \n
+        ${response.licenses} \n`
+        content += `## Install: \n
+        ${response.install} \n`
+        content += ` ##Tests: \n
+        ${response.tests} \n`
+        content += `## Repo: \n
+        ${response.repo} \n `
+        content +=`## Contribute: \n
+        ${response.contribute} \n`
+        
+        fs.writeFile("README.md", content, function(err){
+            if(err){
+                throw err;
+            }
+            else{
+                console.log("Saved!");
+            };
+        });
+        
+        const queryUrl = `https://api.github.com/users/${response.usernam}`;
+        axios.get(queryUrl).then(data =>{return data}).catch(err=>console.log(err));
+      
+    });
+};
+
+init();
