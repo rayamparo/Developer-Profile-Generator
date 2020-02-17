@@ -19,7 +19,7 @@
         Senpai 
 ## Description: 
 
-        Senpais are upper classmen compared to Kohai's## Licenses: 
+         Senpais are upper classmen compared to Kohais## Licenses: 
 
         MIT 
 ## Install: 
@@ -34,3 +34,5 @@
  ## Contribute: 
 
         Senpais are superior to kohais 
+## User Info: 
+https://avatars0.githubusercontent.com/u/58722681?v=4

@@ -71,7 +71,7 @@ function init() {
         content += `## Project: \n
         ${response.project} \n`
         content += `## Description: \n
-        ${response.description}`
+        ${response.description} \n`
         content += `## Licenses: \n
         ${response.licenses} \n`
         content += `## Install: \n
@@ -83,17 +83,23 @@ function init() {
         content +=`## Contribute: \n
         ${response.contribute} \n`
         
-        fs.writeFile("README.md", content, function(err){
-            if(err){
-                throw err;
-            }
-            else{
-                console.log("Saved!");
-            };
-        });
         
-        const queryUrl = `https://api.github.com/users/${response.usernam}`;
-        axios.get(queryUrl).then(data =>{return data}).catch(err=>console.log(err));
+        const queryUrl = `https://api.github.com/users/${response.username}`;
+        
+        axios.get(queryUrl).then(function(response){
+            content += `## User Info: \n`
+            content += response.data.avatar_url
+            //.catch(err=>console.log(err));
+            
+            fs.writeFile("README.md", content, function(err){
+                if(err){
+                    throw err;
+                }
+                else{
+                    console.log("Saved!");
+                };
+            });
+            })
       
     });
 };
