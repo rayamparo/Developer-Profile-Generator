@@ -76,7 +76,7 @@ function init() {
         ${response.licenses} \n`
         content += `## Install: \n
         ${response.install} \n`
-        content += ` ##Tests: \n
+        content += `## Tests: \n
         ${response.tests} \n`
         content += `## Repo: \n
         ${response.repo} \n `
@@ -86,10 +86,12 @@ function init() {
         
         const queryUrl = `https://api.github.com/users/${response.username}`;
         
-        axios.get(queryUrl).then(function(response){
+        axios.get(queryUrl).then(function(response) {
             content += `## User Info: \n`
-            content += response.data.avatar_url
+            content += `<img src="${response.data.avatar_url}"/>`
             //.catch(err=>console.log(err));
+            
+    
             
             fs.writeFile("README.md", content, function(err){
                 if(err){
