@@ -1,39 +1,50 @@
-# Node.js 
-## Table of Contents 
 
-        1.) Project 
+# Senpai
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/rayamparo)
+                
+## Table of Contents
+* [Installation](#installation)
 
-        2.) Description 
+* [Usage](#usage)
 
-        3.) Licenses 
+* [Licenses](#licenses)
 
-        4.) Install 
+* [Contributing](#contributing)
 
-        5.) Tests 
+* [Tests](#tests)
 
-        6.) Repo 
+* [Questions](#questions)
 
-        7.) Contribute 
-## Project: 
 
-        Senpai 
-## Description: 
 
-        Senpais are upper classmen compared to Kohais 
-## Licenses: 
+## Project:
 
-        MIT 
-## Install: 
+Senpai
 
-        npm Senpai 
- ## Tests: 
+## Description:
 
-        npm Kohai 
-## Repo: 
+Senpais are better than kohais
 
-        Kohais are lower classmen 
- ## Contribute: 
+## Licenses:
+MIT
 
-        Senpais are superior to kohais 
-## User Info: 
+## Installation:
+
+npm install
+
+## Tests:
+
+npm test
+
+## Repo:
+
+Nothing
+
+## Contributing:
+
+A master programmer
+
+## User Info:
+        
 <img src="https://avatars0.githubusercontent.com/u/58722681?v=4"/>
+                
